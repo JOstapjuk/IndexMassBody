@@ -4,7 +4,10 @@ nimi=input("Mis on sinu nimi? ")
 print(nimi,", oi kui ilus nimi!")
 vastus=int(input(nimi+ "! Kas leian Sinu keha indeksi? 0-ei, 1-jah => "))
 if vastus==1:
-    pikkus=float(input("Mis on sinu pikkus? "))
+    try:
+        pikkus=float(input("Mis on sinu pikkus? "))
+    except:
+        ValueError
     if pikkus<0:
         tulemus=print("Vale andmed!")
     mass=float(input("Mis on sinu kaal? "))
